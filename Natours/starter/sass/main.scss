@@ -7,10 +7,14 @@
 @import "base/typography";
 @import "base/utilites";
 
-@import "layout/grid";
-@import "components/btn";
-@import "layout/header";
 @import "components/composition";
+@import "components/btn";
+@import "components/feature-box";
+
+@import "layout/header";
+@import "layout/grid";
+
+
 
 @import "pages/home";
 

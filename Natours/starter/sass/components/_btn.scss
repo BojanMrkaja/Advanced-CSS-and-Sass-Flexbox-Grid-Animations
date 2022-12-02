@@ -1,6 +1,7 @@
 @use "../abstracts/variables" as *;
 
 .btn{
+  &,
   &:link,
   &:visited{
     font-size: $default-font-size;
@@ -11,6 +12,9 @@
     border-radius: 10rem;
     transition: all .2s;
     position: relative;
+
+    border: none;
+    cursor: pointer;
   }
 
   &:hover{

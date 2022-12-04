@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 *,
 *::after,
 *::before{
@@ -13,4 +15,9 @@ html{
 body{
   padding: 3rem;
   box-sizing: border-box;
+}
+
+::selection{
+  background-color: $color-primary;
+  color: $color-white;
 }

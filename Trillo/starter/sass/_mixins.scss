@@ -1,5 +1,6 @@
-@mixin CenterFlex{
+@mixin CenterFlex($flexDirection:row){
   display: flex;
+  flex-direction:$flexDirection;
   justify-content: center;
   align-items: center;
 }
@@ -9,4 +10,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@mixin PositionAbsolute($top:unset, $right:unset,$bottom:unset,$left:unset){
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
 }

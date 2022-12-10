@@ -1,4 +1,5 @@
 @use "variables" as *;
+@import "functions";
 
 .container{
   max-width: 120rem;
@@ -35,5 +36,25 @@
 .hotel-view{
   background-color: $color-white;
   flex: 1;
-  height: 80rem;
+}
+
+.details{
+  display: flex;
+  padding: 4.5rem;
+  background-color: $color-grey-light-1;
+  border-bottom: $border-line;
+}
+
+.description{
+  font-size: 1.4rem;
+  background-color: $color-white;
+  box-shadow: $shadow-light;
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+}
+
+.user-reviews{
+  background-color: yellowgreen;
+  flex: 1;
 }

@@ -272,8 +272,17 @@
   cursor: pointer;
   transition: all .2s;
 
+  & span{
+    margin-left: .3rem;
+    transition: margin-left .2s;
+  }
+
   &:hover{
     color: $color-grey-dark-1;
+
+    span{
+      margin-left: .8rem;
+    }
   }
 
   &:focus{
@@ -369,5 +378,129 @@
     &:not(:last-child){
       margin-right: -1.5rem;
     }
+  }
+}
+
+//////////////////////////////////////////
+//REVIEWS
+.review{
+  background-color: $color-white;
+  box-shadow: $shadow-light;
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden;
+
+  &__text{
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__user{
+    display: flex;
+    align-items: center;
+  }
+
+  &__photo{
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+  }
+
+  &__user-box{
+    margin-right: auto;
+  }
+
+  &__user-name{
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .3rem;
+  }
+
+  &__user-date{
+    font-size: 1rem;
+    color: $color-grey-dark-3;
+  }
+
+  &__rating{
+    color: $color-primary;
+    font-size: 2.2rem;
+    font-weight: 300;
+  }
+
+  &::before{
+    content: "\201C";
+    @include PositionAbsolute(-2.75rem,unset,unset,-1rem);
+    font-size: 20rem;
+    color: $color-grey-light-2;
+    font-family: sans-serif;
+    line-height: 1;
+  }
+}
+
+//////////////////////////////////////////
+//CALL TO ACTION
+.cta{
+  padding: 3.5rem 0;
+  text-align: center;
+
+  &__book-now{
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+}
+
+//////////////////////////////////////////
+//CALL TO ACTION BTN
+.btn{
+  font-size: 1.5rem;
+  border: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 10rem;
+  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+  color: $color-white;
+  position: relative;
+  overflow: hidden;
+  transition: all .2s;
+  cursor: pointer;
+
+  &__visible{
+    display: inline-block;
+    padding: 2rem 7.5rem;
+    height: 100%;
+    width: 100%;
+    transition: all .2s;
+  }
+
+  &__invisible{
+    display: inline-block;
+    padding: 2rem 0;
+    height: 100%;
+    width: 100%;
+    @include PositionAbsolute(-100%, unset, unset, 0);
+    transition: all .2s;
+  }
+
+  &:hover{
+    background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark);
+  }
+
+  &:hover &__visible{
+    transform: translateY(100%);
+  }
+
+  &:hover &__invisible{
+    top: 0;
+  }
+
+  &:focus{
+    outline: none;
+    animation: pulsate 1s infinite;
   }
 }

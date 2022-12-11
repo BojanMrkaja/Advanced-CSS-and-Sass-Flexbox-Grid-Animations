@@ -20,5 +20,9 @@
   $shadow-light:0 2rem 5rem rgba($color-black, .1);
 
   //BORDERS
-  $border-line:1px solid $color-grey-light-2
+  $border-line:1px solid $color-grey-light-2;
+
+  //BREAKPOINTS
+  $bp-largest:75em; //1200px
+
 

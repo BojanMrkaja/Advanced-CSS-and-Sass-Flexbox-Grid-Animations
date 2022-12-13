@@ -61,5 +61,5 @@
 
 .user-reviews{
   flex: 1;
-  @include CenterFlex(column)
+  @include CenterFlex(column);
 }
